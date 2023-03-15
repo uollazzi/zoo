@@ -1,0 +1,7 @@
+<div *ngIf="persona">
+    <h3>{{persona.nome}} {{persona.cognome}}</h3>
+    <p><a href="mailto:{{persona.email}}">{{persona.email}}</a></p>
+    <app-occupazioni-list [occupazioni]="persona.occupazioni"></app-occupazioni-list>
+    <app-lingue-list [lingue]="persona.lingue"></app-lingue-list>
+    <button (click)="assumi()">Assumi persona</button>
+</div>

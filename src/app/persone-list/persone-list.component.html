@@ -1,0 +1,5 @@
+<h2>Lista Persone in data {{1678362496*1000 | date:'dd/MMMM/yyyy'}}</h2>
+<app-lingue-list [lingue]="lingueTotali"></app-lingue-list>
+
+<app-persona-detail *ngFor="let p of persone" [persona]="p"
+    (onPersonaAssunta)="assumiPersona($event)"></app-persona-detail>

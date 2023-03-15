@@ -1,0 +1,25 @@
+<div *ngIf="animale">
+    <h2>Dettagli {{animale.nome | uppercase}}</h2>
+    <div>id: <strong>{{animale.id}}</strong></div>
+    <div>nome: <strong>{{animale.nome}}</strong></div>
+    <div>
+        <label for="nome">Nome animale: </label>
+        <input type="text" id="nome" placeholder="Nome" [(ngModel)]="animale.nome">
+    </div>
+    <div>
+        <label for="quadrupede">Quadrupede: </label>
+        <input type="checkbox" id="quadrupede" [(ngModel)]="animale.quadrupede">
+    </div>
+    <hr>
+</div>
+<div *ngIf="!animale">Selezionare un animale per far apparire la form</div>
+<h2>Animali della fattoria</h2>
+<ul>
+    <!-- <li *ngFor="let a of animali" [style.background-color]="a.quadrupede ? '#FF0000' : 'yellow'">
+        <button type="button" (click)="selezionaAnimale(a)">{{a.id}} - {{a.nome}}</button>
+    </li> -->
+    <li *ngFor="let a of animali" class="animale"
+        [ngClass]="{'quadrupede': a.quadrupede, 'no-quadrupede': !a.quadrupede}">
+        <button type="button" (click)="selezionaAnimale(a)">{{a.id}} - {{a.nome}}</button>
+    </li>
+</ul>
