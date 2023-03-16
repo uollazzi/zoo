@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animale } from '../animale';
 
 @Component({
@@ -10,4 +10,11 @@ export class AnimaleDetailComponent {
 
   @Input()
   animale?: Animale;
+
+  @Output()
+  onAnimaleEliminato = new EventEmitter<Animale>();
+
+  elimina() {
+    this.onAnimaleEliminato.emit(this.animale);
+  }
 }

@@ -10,6 +10,9 @@ import { PersoneListComponent } from './persone-list/persone-list.component';
 import { PersonaDetailComponent } from './persona-detail/persona-detail.component';
 import { OccupazioniListComponent } from './occupazioni-list/occupazioni-list.component';
 import { LingueListComponent } from './lingue-list/lingue-list.component';
+import { MenuComponent } from './menu/menu.component';
+import { AnimaleEditComponent } from './animale-edit/animale-edit.component';
+import { AnimaliTotaleComponent } from './animali-totale/animali-totale.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { LingueListComponent } from './lingue-list/lingue-list.component';
     PersoneListComponent,
     PersonaDetailComponent,
     OccupazioniListComponent,
-    LingueListComponent
+    LingueListComponent,
+    MenuComponent,
+    AnimaleEditComponent,
+    AnimaliTotaleComponent
   ],
   imports: [
     BrowserModule,

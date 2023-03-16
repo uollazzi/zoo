@@ -1,10 +1,22 @@
 <h1>{{title}}</h1>
-
+<app-menu (onPageChanged)="mostraPagina($event)"></app-menu>
 <!-- <app-animali></app-animali> -->
-<div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+<!-- <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
     <app-animali-list></app-animali-list>
-
     <app-persone-list></app-persone-list>
+</div> -->
 
+<!-- TOTALEMTE IDENTICI USARE A PIACERE -->
+<!-- <div [style.background-color]="bg">
+    <app-animali-list *ngIf="paginaSelezionata == 'animali'"></app-animali-list>
 
+    <app-persone-list *ngIf="paginaSelezionata == 'persone'"></app-persone-list>
+</div> -->
+
+<div [style.background-color]="bg" [ngSwitch]="paginaSelezionata">
+    <app-animali-list *ngSwitchCase="'animali'"></app-animali-list>
+
+    <app-animali-totale *ngSwitchCase="'animali-totale'"></app-animali-totale>
+
+    <app-persone-list *ngSwitchCase="'persone'"></app-persone-list>
 </div>

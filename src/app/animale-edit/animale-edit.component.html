@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <label for="id">Id: </label>
+        <input type="number" id="id" placeholder="Id" [(ngModel)]="animale.id">
+    </div>
+    <div>
+        <label for="nome">Nome animale: </label>
+        <input type="text" id="nome" placeholder="Nome" [(ngModel)]="animale.nome">
+    </div>
+    <div>
+        <label for="quadrupede">Quadrupede: </label>
+        <input type="checkbox" id="quadrupede" [(ngModel)]="animale.quadrupede">
+    </div>
+    <button (click)="nuovoAnimale()">Inserisci nuovo animale</button>
+    <hr>
+</div>

@@ -1,4 +1,6 @@
 <h2>Lista Animali</h2>
 
-<app-animale-detail *ngFor="let a of animali" [animale]="a">
+<app-animale-edit (onNuovoAnimale)="inserisciAnimale($event)"></app-animale-edit>
+
+<app-animale-detail *ngFor="let a of animali" [animale]="a" (onAnimaleEliminato)="eliminaAnimale($event)">
 </app-animale-detail>
