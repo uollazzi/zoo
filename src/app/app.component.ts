@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Nella Vecchia Fattoria';
 
-  paginaSelezionata = "animali";
+  paginaSelezionata = "amazon";
   bg = "";
 
   mostraPagina(pagina: string) {

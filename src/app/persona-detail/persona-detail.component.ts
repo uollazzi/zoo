@@ -15,6 +15,7 @@ export class PersonaDetailComponent {
   onPersonaAssunta = new EventEmitter<Persona>();
 
   assumi() {
+
     this.onPersonaAssunta.emit(this.persona);
   }
 }

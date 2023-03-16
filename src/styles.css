@@ -10,3 +10,19 @@
 .animale {
     border: 1px black solid;
 }
+
+img {
+    max-width: 100px;
+}
+
+.prodotti {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+app-prodotto-detail {
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}

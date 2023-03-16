@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Animale } from '../animale';
-import { ANIMALI } from '../animali-dati';
+import { AnimaliService } from '../animali.service';
 
 @Component({
   selector: 'app-animali-list',
   templateUrl: './animali-list.component.html',
   styleUrls: ['./animali-list.component.css']
 })
-export class AnimaliListComponent {
-  animali: Animale[] = ANIMALI;
+export class AnimaliListComponent implements OnInit {
+  animali: Animale[] = [];
+
+  constructor(private animaliService: AnimaliService) {
+
+  }
+
+  ngOnInit(): void {
+    this.animali = this.animaliService.getAnimali();
+  }
 
   inserisciAnimale(a: Animale) {
-    this.animali.push(a);
+    this.animaliService.addAnimale(a);
+    this.animali = this.animaliService.getAnimali();
   }
 
   eliminaAnimale(a: Animale) {
-    let indice = this.animali.indexOf(a);
-
-    if (indice > -1) {
-      this.animali.splice(indice, 1);
-    }
+    this.animaliService.removeAnimale(a);
+    this.animali = this.animaliService.getAnimali();
   }
 }

@@ -1,0 +1,9 @@
+<div *ngIf="prodotto">
+    <h3>{{prodotto.title}}</h3>
+    <img [src]="prodotto.image">
+    <p>{{prodotto.price | currency:'EUR':'symbol'}}</p>
+    <button type="button" (click)="aggiungi(prodotto)">Aggiungi al carrello</button>
+    <!-- <button type="button" *ngIf="carrelloService.esiste(prodotto.id)"
+        (click)="carrelloService.rimuovi(prodotto.id)">Rimuovi
+        da carrello</button> -->
+</div>

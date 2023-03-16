@@ -1,0 +1,8 @@
+<div *ngFor="let p of carrelloService.prodotti">
+    {{p.title}}&nbsp;
+    <strong>{{p.qta}}</strong>&nbsp;
+    <strong>{{p.price * p.qta}}</strong>&nbsp;
+    <!-- <button type="button" (click)="rimuovi(p)">Rimuovimi</button> -->
+</div>
+Totale: {{carrelloService.totale}}
+<!-- <button type="button" (click)="carrelloService.svuota()">Svuota</button> -->

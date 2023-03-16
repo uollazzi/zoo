@@ -13,6 +13,10 @@ import { LingueListComponent } from './lingue-list/lingue-list.component';
 import { MenuComponent } from './menu/menu.component';
 import { AnimaleEditComponent } from './animale-edit/animale-edit.component';
 import { AnimaliTotaleComponent } from './animali-totale/animali-totale.component';
+import { ProdottiListComponent } from './prodotti-list/prodotti-list.component';
+import { ProdottoDetailComponent } from './prodotto-detail/prodotto-detail.component';
+import { CarrelloComponent } from './carrello/carrello.component';
+import { AmazonComponent } from './amazon/amazon.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { AnimaliTotaleComponent } from './animali-totale/animali-totale.componen
     LingueListComponent,
     MenuComponent,
     AnimaleEditComponent,
-    AnimaliTotaleComponent
+    AnimaliTotaleComponent,
+    ProdottiListComponent,
+    ProdottoDetailComponent,
+    CarrelloComponent,
+    AmazonComponent
   ],
   imports: [
     BrowserModule,
