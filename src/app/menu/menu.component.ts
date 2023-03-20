@@ -12,5 +12,45 @@ export class MenuComponent {
 
   cambiaPagina(pagina: string) {
     this.onPageChanged.emit(pagina);
+
+    let stagione: Stagione = Stagione.Inverno;
+
+    this.checkStagione(stagione);
+
   }
+
+  checkStagione(s: Stagione) {
+    if (s == Stagione.Inverno) {
+      console.log("nevica");
+    } else if (s == Stagione.Autunno) {
+      console.log("piove");
+    }
+    else {
+      console.log("non so");
+    }
+
+    switch (s) {
+      case Stagione.Inverno:
+
+        break;
+      case Stagione.Primavera:
+
+        break;
+      case Stagione.Autunno:
+
+        break;
+      case Stagione.Estate:
+
+        break;
+
+
+    }
+  }
+}
+
+enum Stagione {
+  Primavera,
+  Estate,
+  Autunno,
+  Inverno
 }
